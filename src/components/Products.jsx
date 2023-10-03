@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addItems, removeItems } from '../rredux/slices/CartSlice';
 import toast from "react-hot-toast"
-import {FaRupeeSign} from 'react-icons/fa'
+import {TbCurrencyRupee} from 'react-icons/tb'
 
 const Products = ({post}) => {
 
@@ -31,7 +31,7 @@ const Products = ({post}) => {
         </div>
         <div className="flex text-lg gap-12 mt-3 justify-between items-center">
          
-            <p className="text-green-600 font-semibold">{price}</p>
+            <p className="text-green-600 font-semibold">{"Rs : "}{price}</p>
         </div>
         {Cart.some((p) => p.id === post.id) ? (
           <button
